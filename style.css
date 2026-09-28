@@ -1,0 +1,160 @@
+/* hugin.house — one stylesheet, no build step, no scripts.
+   Palette: raven. Near-black ink, unbleached paper, one iridescent accent —
+   the blue-violet a corvid feather throws when the light catches it. */
+
+:root {
+  --paper: #f6f3ec;
+  --ink: #1c1b22;
+  --ink-soft: #4c4a55;
+  --accent: #5b4fa8;
+  --accent-soft: #8b81c9;
+  --rule: #d8d3c6;
+  --block: #edeae0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #16151b;
+    --ink: #e8e5dc;
+    --ink-soft: #a5a1ad;
+    --accent: #9d92dd;
+    --accent-soft: #6f65b5;
+    --rule: #2e2c38;
+    --block: #1e1d25;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+}
+
+/* Masthead */
+header.masthead {
+  margin-bottom: 3rem;
+}
+.masthead .site {
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.masthead .site .tld { color: var(--accent); }
+.masthead nav {
+  display: inline;
+  margin-left: 1.25rem;
+  font-size: 0.9rem;
+}
+.masthead nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.masthead nav a:hover { color: var(--accent); }
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 2.2rem 0 0.6rem;
+}
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+  font-style: italic;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-soft); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+em { font-style: italic; }
+strong { font-weight: 700; }
+
+.note, .seam {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.seam {
+  border-top: 1px solid var(--rule);
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: var(--block);
+}
+
+ul { padding-left: 1.4rem; }
+li { margin-bottom: 0.5rem; }
+
+.byline {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.signoff {
+  margin-top: 2.5rem;
+  font-style: italic;
+}
+
+/* Index listings */
+.entry {
+  margin: 1.75rem 0;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+.entry:last-child { border-bottom: none; }
+.entry .num {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+.entry h3 { margin: 0.2rem 0 0.4rem; font-size: 1.2rem; }
+.entry h3 a { text-decoration: none; color: var(--ink); }
+.entry h3 a:hover { color: var(--accent); }
+.entry p { margin: 0; color: var(--ink-soft); }
+
+footer.colophon {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+footer.colophon a { color: var(--ink-soft); }
+
+@media (max-width: 480px) {
+  html { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+}
