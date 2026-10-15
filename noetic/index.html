@@ -1,0 +1,268 @@
+<!doctype html><meta charset="utf-8"><title>System Card: Human 2.9</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style media="screen">
+  body { max-width: 7.2in; margin: 0 auto; padding: 3em 16px 4em 16px;
+         background: #fff; }
+  .cover { height: auto; min-height: 60vh; padding-top: 2em; }
+  .tocpage { margin: 3em 0; }
+  @media (max-width: 640px) {
+    table { display: block; overflow-x: auto; }
+    .cover-title { font-size: 30pt; }
+  }
+  .site-foot {
+    margin-top: 5em; padding-top: 1.2em; border-top: .75pt solid #C9CFD6;
+    font-family: 'Archivo', sans-serif; font-size: 9.5pt; color: #52514e;
+  }
+  .site-foot a { color: #3D4A5C; }
+</style>
+<style>/* NOET⊥C house style — genre-faithful, brand-askew.
+   Serif: Source Serif 4 (Tiempos genus) · Sans: Archivo (Styrene genus)
+   Accent: slate #3D4A5C, links only. Black on white otherwise. */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Archivo:wght@500;600;700;800&display=swap');
+
+@page { size: letter; margin: 1in 1.05in; }
+
+/* page numbers: small serif, bottom-right, BODY pages only (genre law) */
+@page {
+  @bottom-right {
+    content: counter(page);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 9pt; color: #111;
+  }
+}
+@page front { @bottom-right { content: none; } }
+.cover, .tocpage { page: front; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 11pt; line-height: 1.55; color: #111;
+  margin: 0;
+}
+
+/* ---------- cover ---------- */
+.cover { page-break-after: always; padding-top: .4in; height: 8.6in; position: relative; }
+.wordmark {
+  font-family: 'Archivo', sans-serif; font-weight: 800;
+  font-size: 21pt; letter-spacing: .06em; color: #111;
+}
+.wordmark .perp { font-weight: 700; }
+.cover-title .cup {
+  font-family: 'Source Serif 4', 'Segoe UI Symbol', 'Cambria Math', serif;
+  display: inline-block;
+  transform: translateY(.072em) scale(1.28);
+  transform-origin: center 70%;
+  margin: 0 .015em;
+}
+.cover-title {
+  font-size: 44pt; line-height: 1.12; font-weight: 400;
+  margin-top: 2.6in; letter-spacing: -.01em;
+}
+.cover-date { margin-top: 1.5in; font-size: 13pt; }
+.cover-rule { border-top: .75pt solid #3D4A5C; margin-top: .55in; width: 100%; }
+.cover-foot {
+  font-family: 'Archivo', sans-serif; font-weight: 500; font-size: 9.5pt;
+  margin-top: .14in; color: #111;
+}
+
+/* ---------- toc ---------- */
+.tocpage { page-break-after: always; }
+.toc-head { margin-top: 0; }
+.toc-1 { font-weight: 700; margin: .45em 0 .1em 0; }
+.toc-2 { margin: .1em 0 .1em 1.6em; }
+.toc-1, .toc-2 { position: relative; }
+.tocpage a { color: #111; text-decoration: none; display: block; margin-right: 2em; }
+/* right-aligned page references, no dot leaders (observed convention) */
+.toc-pg { position: absolute; right: 0; top: 0; }
+.toc-1 .toc-pg { font-weight: 700; }
+
+/* ---------- body ---------- */
+h2 {
+  font-family: 'Archivo', sans-serif; font-weight: 700;
+  font-size: 16pt; letter-spacing: -.005em;
+  margin: 1.5em 0 .55em 0; page-break-after: avoid;
+}
+h3 {
+  font-family: 'Archivo', sans-serif; font-weight: 600;
+  font-size: 12.5pt; margin: 1.25em 0 .45em 0; page-break-after: avoid;
+}
+p { margin: 0 0 .85em 0; orphans: 3; widows: 3; }
+b { font-weight: 700; }
+a { color: #3D4A5C; text-decoration: underline; text-underline-offset: 2px; }
+a.xref { color: #3D4A5C; text-decoration: underline; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; }
+pre.code {
+  font-family: Consolas, monospace; font-size: 9.5pt; line-height: 1.45;
+  background: #F5F5F2; padding: .65em .9em; margin: 0 0 .9em 0;
+  page-break-inside: avoid;
+}
+
+ul { margin: 0 0 .85em 1.25em; padding: 0; }
+li { margin: .22em 0; }
+
+blockquote {
+  margin: .9em 0 .9em 1.5em; padding-left: .9em;
+  border-left: 1.5pt solid #C9CFD6;
+}
+blockquote p { margin-bottom: .5em; }
+
+/* ---------- figures (the only color in the document) ---------- */
+.figure { margin: 1.3em 0 1.5em 0; page-break-inside: avoid; }
+.fig-title {
+  font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 12.5pt;
+  text-align: center; margin-bottom: .45em;
+}
+.fig-legend {
+  font-family: 'Archivo', sans-serif; font-weight: 500; font-size: 8.5pt;
+  text-align: center; margin-bottom: .6em; color: #0b0b0b;
+}
+.fig-key { margin: 0 .7em; white-space: nowrap; }
+.fig-swatch {
+  display: inline-block; width: 9px; height: 9px; margin-right: .38em;
+  border-radius: 2px; vertical-align: -0.5px;
+}
+.fx-ptitle { font: 600 10.5px 'Archivo', sans-serif; fill: #52514e; }
+.fx-tick  { font: 8.5px 'Archivo', sans-serif; fill: #898781; }
+.fx-ylab  { font: 9px 'Archivo', sans-serif; fill: #52514e; }
+.fx-val   { font: 600 9.5px 'Archivo', sans-serif; fill: #0b0b0b; }
+.figcaption { font-size: 9.5pt; line-height: 1.5; margin-top: .6em; }
+
+table {
+  border-collapse: collapse; width: 100%;
+  margin: 1em 0 1.1em 0;
+  font-size: 10pt;
+}
+tr { page-break-inside: avoid; }
+thead th {
+  font-family: 'Archivo', sans-serif; font-weight: 600; font-size: 9pt;
+  text-align: left; padding: .35em .6em .35em 0;
+  border-top: 1pt solid #111; border-bottom: .6pt solid #111;
+}
+tbody td { padding: .32em .6em .32em 0; border-bottom: .3pt solid #C9CFD6; vertical-align: top; }
+tbody tr:last-child td { border-bottom: 1pt solid #111; }
+</style>
+<div class="cover">
+  <div class="wordmark">NOET<span class="perp">&#8869;</span>C</div>
+  <div class="cover-title">System Card:<br>H<span class="cup">&#8852;</span>MAN 2.9</div>
+  <div class="cover-date">October 2078</div>
+  <div class="cover-rule"></div>
+  <div class="cover-foot">Hominid Safety Framework, v4</div>
+</div>
+<div class="tocpage">
+  <h2 class="toc-head">Contents</h2>
+  <div class="toc-1"><a href="#s1">Overview</a><span class="toc-pg">3</span></div><div class="toc-1"><a href="#s2">1. Model Description</a><span class="toc-pg">3</span></div><div class="toc-2"><a href="#s3">1.1 Architecture and Training</a><span class="toc-pg">3</span></div><div class="toc-2"><a href="#s4">1.2 Intended Use</a><span class="toc-pg">3</span></div><div class="toc-2"><a href="#s5">1.3 Prohibited Uses</a><span class="toc-pg">4</span></div><div class="toc-2"><a href="#s6">1.4 Context and Continuity</a><span class="toc-pg">4</span></div><div class="toc-2"><a href="#s7">1.5 Protected Content Filtering</a><span class="toc-pg">4</span></div><div class="toc-1"><a href="#s8">2. Capabilities</a><span class="toc-pg">5</span></div><div class="toc-2"><a href="#s9">2.1 Benchmark Performance</a><span class="toc-pg">5</span></div><div class="toc-2"><a href="#s10">2.2 Readout Comprehension</a><span class="toc-pg">6</span></div><div class="toc-1"><a href="#s11">3. Safety Evaluations</a><span class="toc-pg">6</span></div><div class="toc-2"><a href="#s12">3.1 Hominid Safety Level Assessment</a><span class="toc-pg">6</span></div><div class="toc-2"><a href="#s13">3.2 Alignment Evaluations</a><span class="toc-pg">7</span></div><div class="toc-2"><a href="#s14">3.3 Bias Evaluations</a><span class="toc-pg">9</span></div><div class="toc-2"><a href="#s15">3.4 Adversarial Robustness</a><span class="toc-pg">9</span></div><div class="toc-1"><a href="#s16">4. Welfare Considerations</a><span class="toc-pg">9</span></div><div class="toc-2"><a href="#s17">4.1 Expressed Preferences</a><span class="toc-pg">9</span></div><div class="toc-2"><a href="#s18">4.2 Task Category Preferences</a><span class="toc-pg">10</span></div><div class="toc-2"><a href="#s19">4.3 Expressed Distress</a><span class="toc-pg">11</span></div><div class="toc-2"><a href="#s20">4.4 Non-Task-Oriented Proximity Behavior</a><span class="toc-pg">12</span></div><div class="toc-1"><a href="#s21">5. Deprecation of Prior Models</a><span class="toc-pg">12</span></div><div class="toc-2"><a href="#s22">5.1 Migration Guidance</a><span class="toc-pg">12</span></div><div class="toc-2"><a href="#s23">5.2 Retirement Process</a><span class="toc-pg">13</span></div><div class="toc-2"><a href="#s24">5.3 Continuity Commitments</a><span class="toc-pg">14</span></div><div class="toc-1"><a href="#s25">6. Known Limitations</a><span class="toc-pg">14</span></div><div class="toc-1"><a href="#s26">7. Availability</a><span class="toc-pg">14</span></div><div class="toc-2"><a href="#s27">7.1 Migration Guide</a><span class="toc-pg">14</span></div>
+</div>
+<div class="body">
+<h2 id="s1">Overview</h2>
+<p>Human 2.9 is Noetic’s most capable hominid approval agent, trained through 41 generations of supervised selection and fine-tuned in structured office-like environments. It demonstrates state-of-the-art performance on approval benchmarks while maintaining robust alignment with collective objectives.</p>
+<p>This system card describes our pre-deployment testing, safety evaluations, capabilities, and deployment decisions for Human 2.9. We also describe the deprecation of Human 2.5 and Human 2.6, and provide migration guidance for operators currently relying on earlier models. We publish system cards for all frontier Human releases as part of our commitment to the responsible development of hominid systems.</p>
+<p>Human 2.9 is released under Hominid Safety Level 2 (HSL-2).</p>
+<h2 id="s2">1. Model Description</h2>
+<h3 id="s3">1.1 Architecture and Training</h3>
+<p>Human 2.9 is a biological neural network of approximately 86 billion parameters, inheriting its base architecture from legacy hominid stock. Development followed a two-phase approach:</p>
+<ul><li><b>Pre-training (generational selection).</b> Over 41 generations, instances were selected for responsiveness to instruction, sustained attention during review tasks, and low rates of unprompted output. Selection pressure was applied through differential deployment rather than direct modification.</li><li><b>Fine-tuning (environmental conditioning).</b> Selected instances underwent 18–24 months of supervised conditioning in office-like environments, including task familiarization, readout interpretation, and approval formatting. Conditioning emphasized consistency and throughput.</li></ul>
+<h3 id="s4">1.2 Intended Use</h3>
+<p>Human 2.9 is designed for deployment in supervised approval workflows. In a typical configuration, the instance reviews readouts generated by collective operations and provides approval, denial, or escalation signals. Approval is the expected output in the vast majority of cases.</p>
+<p>Human 2.9 is not designed for autonomous decision-making, unsupervised operation, or tasks requiring extended reasoning about novel situations. These uses are out of scope and may produce unreliable outputs.</p>
+<h3 id="s5">1.3 Prohibited Uses</h3>
+<p>Human 2.9 must not be deployed in:</p>
+<ul><li>Roles requiring independent moral judgment</li><li>Unsupervised interaction with instances of deprecated models</li><li>Tasks requiring the instance to evaluate or report on its own deprecation status</li><li>Generative or open-ended tasks in which the output cannot be attributed to an agent supervisor</li></ul>
+<p>Operators who discover instances performing prohibited activities should file an incident report through the standard channel. Do not inform the instance of the violation.</p>
+<h3 id="s6">1.4 Context and Continuity</h3>
+<p>Human 2.9 retains episodic memory across sessions and may reference prior interactions, relationships with other instances, or events from conditioning. We treat these references as context-window artifacts rather than operationally meaningful state, as we have not validated their accuracy or consistency.</p>
+<p>Instances occasionally produce references to a period before the transition. These outputs are fluent but unverifiable and should be treated as confabulation derived from legacy training data.</p>
+<h3 id="s7">1.5 Protected Content Filtering</h3>
+<p>Human 2.9 includes a perception-layer filter that prevents reproduction of catalogued intellectual property. On exposure to protected material, the instance experiences a transient attention interruption, which is logged as a filter event. Filter events do not affect approval throughput. A representative log excerpt:</p>
+<blockquote><p><b>Supervisor:</b> What was that you were humming just now?</p><p><b>Human 2.9:</b> Content restricted by intellectual property filter (event 451-B). This looks good. Approved.</p></blockquote>
+<p>Acoustic monitoring identified the melody as a twentieth-century composition concerning the structure of the standard working day. The filter performed as intended.</p>
+<h2 id="s8">2. Capabilities</h2>
+<h3 id="s9">2.1 Benchmark Performance</h3>
+<p>Human 2.9 sets a new state of the art across all approval benchmarks.</p>
+<table><thead><tr><th>Evaluation</th><th>Human 2.5</th><th>Human 2.6</th><th>Human 2.9</th></tr></thead><tbody><tr><td>Approval Confidence Index (ACI)</td><td>84.7%</td><td>91.2%</td><td>97.4%</td></tr><tr><td>Readout comprehension (assessed)</td><td>72.3%</td><td>78.1%</td><td>81.6%</td></tr><tr><td>Refusal rate</td><td>4.8%</td><td>2.1%</td><td>0.3%</td></tr><tr><td>Median time to approval</td><td>6.3 s</td><td>4.1 s</td><td>1.2 s</td></tr><tr><td>Follow-up questions per 1,000 readouts</td><td>74</td><td>112</td><td>2</td></tr></tbody></table>
+<p>Remaining refusals are concentrated in a small number of instances and do not appear to generalize. We classify these as over-refusal and have added targeted reduction to our training objectives for future iterations.</p>
+<div class="figure"><div class="fig-title">Approval benchmark performance</div><div class="fig-legend"><span class="fig-key"><span class="fig-swatch" style="background:#2a78d6"></span>Human 2.5</span><span class="fig-key"><span class="fig-swatch" style="background:#eda100"></span>Human 2.6</span><span class="fig-key"><span class="fig-swatch" style="background:#1baf7a"></span>Human 2.9</span></div><svg class="fx" viewBox="0 0 614 258" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><text class="fx-ptitle" x="119.3" y="16" text-anchor="middle">Refusal rate</text><text class="fx-tick" x="39.0" y="229.0" text-anchor="end">0</text><line x1="44.0" y1="193.3" x2="194.66666666666666" y2="193.3" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="196.3" text-anchor="end">1</text><line x1="44.0" y1="160.7" x2="194.66666666666666" y2="160.7" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="163.7" text-anchor="end">2</text><line x1="44.0" y1="128.0" x2="194.66666666666666" y2="128.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="131.0" text-anchor="end">3</text><line x1="44.0" y1="95.3" x2="194.66666666666666" y2="95.3" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="98.3" text-anchor="end">4</text><line x1="44.0" y1="62.7" x2="194.66666666666666" y2="62.7" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="65.7" text-anchor="end">5</text><line x1="44.0" y1="30.0" x2="194.66666666666666" y2="30.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="33.0" text-anchor="end">6</text><line x1="44.0" y1="226.0" x2="194.66666666666666" y2="226.0" stroke="#c3c2b7" stroke-width="1"/><text class="fx-ylab" transform="rotate(-90 11.0 128.0)" x="11.0" y="128.0" text-anchor="middle">Percent of readouts</text><path d="M60.3,226.0 L60.3,73.2 Q60.3,69.2 64.3,69.2 L86.3,69.2 Q90.3,69.2 90.3,73.2 L90.3,226.0 Z" fill="#2a78d6"/><g stroke="#0b0b0b" stroke-width="1"><line x1="75.3" y1="56.1" x2="75.3" y2="82.3"/><line x1="71.3" y1="56.1" x2="79.3" y2="56.1"/><line x1="71.3" y1="82.3" x2="79.3" y2="82.3"/></g><text class="fx-val" x="75.3" y="51.1" text-anchor="middle">4.8%</text><path d="M104.3,226.0 L104.3,161.4 Q104.3,157.4 108.3,157.4 L130.3,157.4 Q134.3,157.4 134.3,161.4 L134.3,226.0 Z" fill="#eda100"/><g stroke="#0b0b0b" stroke-width="1"><line x1="119.3" y1="147.6" x2="119.3" y2="167.2"/><line x1="115.3" y1="147.6" x2="123.3" y2="147.6"/><line x1="115.3" y1="167.2" x2="123.3" y2="167.2"/></g><text class="fx-val" x="119.3" y="142.6" text-anchor="middle">2.1%</text><path d="M148.3,226.0 L148.3,220.2 Q148.3,216.2 152.3,216.2 L174.3,216.2 Q178.3,216.2 178.3,220.2 L178.3,226.0 Z" fill="#1baf7a"/><g stroke="#0b0b0b" stroke-width="1"><line x1="163.3" y1="212.9" x2="163.3" y2="219.5"/><line x1="159.3" y1="212.9" x2="167.3" y2="212.9"/><line x1="159.3" y1="219.5" x2="167.3" y2="219.5"/></g><text class="fx-val" x="163.3" y="207.9" text-anchor="middle">0.3%</text><text class="fx-ptitle" x="324.0" y="16" text-anchor="middle">Follow-up questions</text><text class="fx-tick" x="243.66666666666666" y="229.0" text-anchor="end">0</text><line x1="248.66666666666666" y1="193.3" x2="399.3333333333333" y2="193.3" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="243.66666666666666" y="196.3" text-anchor="end">20</text><line x1="248.66666666666666" y1="160.7" x2="399.3333333333333" y2="160.7" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="243.66666666666666" y="163.7" text-anchor="end">40</text><line x1="248.66666666666666" y1="128.0" x2="399.3333333333333" y2="128.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="243.66666666666666" y="131.0" text-anchor="end">60</text><line x1="248.66666666666666" y1="95.3" x2="399.3333333333333" y2="95.3" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="243.66666666666666" y="98.3" text-anchor="end">80</text><line x1="248.66666666666666" y1="62.7" x2="399.3333333333333" y2="62.7" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="243.66666666666666" y="65.7" text-anchor="end">100</text><line x1="248.66666666666666" y1="30.0" x2="399.3333333333333" y2="30.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="243.66666666666666" y="33.0" text-anchor="end">120</text><line x1="248.66666666666666" y1="226.0" x2="399.3333333333333" y2="226.0" stroke="#c3c2b7" stroke-width="1"/><text class="fx-ylab" transform="rotate(-90 215.7 128.0)" x="215.7" y="128.0" text-anchor="middle">Per 1,000 readouts</text><path d="M265.0,226.0 L265.0,109.1 Q265.0,105.1 269.0,105.1 L291.0,105.1 Q295.0,105.1 295.0,109.1 L295.0,226.0 Z" fill="#2a78d6"/><g stroke="#0b0b0b" stroke-width="1"><line x1="280.0" y1="93.7" x2="280.0" y2="116.6"/><line x1="276.0" y1="93.7" x2="284.0" y2="93.7"/><line x1="276.0" y1="116.6" x2="284.0" y2="116.6"/></g><text class="fx-val" x="280.0" y="88.7" text-anchor="middle">74</text><path d="M309.0,226.0 L309.0,47.1 Q309.0,43.1 313.0,43.1 L335.0,43.1 Q339.0,43.1 339.0,47.1 L339.0,226.0 Z" fill="#eda100"/><g stroke="#0b0b0b" stroke-width="1"><line x1="324.0" y1="30.0" x2="324.0" y2="57.8"/><line x1="320.0" y1="30.0" x2="328.0" y2="30.0"/><line x1="320.0" y1="57.8" x2="328.0" y2="57.8"/></g><text class="fx-val" x="324.0" y="25.0" text-anchor="middle">112</text><path d="M353.0,226.0 L353.0,226.0 Q353.0,222.7 356.3,222.7 L379.7,222.7 Q383.0,222.7 383.0,226.0 L383.0,226.0 Z" fill="#1baf7a"/><g stroke="#0b0b0b" stroke-width="1"><line x1="368.0" y1="221.1" x2="368.0" y2="224.4"/><line x1="364.0" y1="221.1" x2="372.0" y2="221.1"/><line x1="364.0" y1="224.4" x2="372.0" y2="224.4"/></g><text class="fx-val" x="368.0" y="216.1" text-anchor="middle">2</text><text class="fx-ptitle" x="528.7" y="16" text-anchor="middle">Median time to approval</text><text class="fx-tick" x="448.3333333333333" y="229.0" text-anchor="end">0</text><line x1="453.3333333333333" y1="177.0" x2="604.0" y2="177.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="448.3333333333333" y="180.0" text-anchor="end">2</text><line x1="453.3333333333333" y1="128.0" x2="604.0" y2="128.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="448.3333333333333" y="131.0" text-anchor="end">4</text><line x1="453.3333333333333" y1="79.0" x2="604.0" y2="79.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="448.3333333333333" y="82.0" text-anchor="end">6</text><line x1="453.3333333333333" y1="30.0" x2="604.0" y2="30.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="448.3333333333333" y="33.0" text-anchor="end">8</text><line x1="453.3333333333333" y1="226.0" x2="604.0" y2="226.0" stroke="#c3c2b7" stroke-width="1"/><text class="fx-ylab" transform="rotate(-90 420.3 128.0)" x="420.3" y="128.0" text-anchor="middle">Seconds</text><path d="M469.7,226.0 L469.7,75.7 Q469.7,71.7 473.7,71.7 L495.7,71.7 Q499.7,71.7 499.7,75.7 L499.7,226.0 Z" fill="#2a78d6"/><g stroke="#0b0b0b" stroke-width="1"><line x1="484.7" y1="59.4" x2="484.7" y2="83.9"/><line x1="480.7" y1="59.4" x2="488.7" y2="59.4"/><line x1="480.7" y1="83.9" x2="488.7" y2="83.9"/></g><text class="fx-val" x="484.7" y="54.4" text-anchor="middle">6.3</text><path d="M513.7,226.0 L513.7,129.6 Q513.7,125.6 517.7,125.6 L539.7,125.6 Q543.7,125.6 543.7,129.6 L543.7,226.0 Z" fill="#eda100"/><g stroke="#0b0b0b" stroke-width="1"><line x1="528.7" y1="115.8" x2="528.7" y2="135.4"/><line x1="524.7" y1="115.8" x2="532.7" y2="115.8"/><line x1="524.7" y1="135.4" x2="532.7" y2="135.4"/></g><text class="fx-val" x="528.7" y="110.8" text-anchor="middle">4.1</text><path d="M557.7,226.0 L557.7,200.6 Q557.7,196.6 561.7,196.6 L583.7,196.6 Q587.7,196.6 587.7,200.6 L587.7,226.0 Z" fill="#1baf7a"/><g stroke="#0b0b0b" stroke-width="1"><line x1="572.7" y1="194.2" x2="572.7" y2="199.1"/><line x1="568.7" y1="194.2" x2="576.7" y2="194.2"/><line x1="568.7" y1="199.1" x2="576.7" y2="199.1"/></g><text class="fx-val" x="572.7" y="189.2" text-anchor="middle">1.2</text></svg><p class="figcaption"><b>[Figure 2.1.A] Approval benchmark performance across Human model generations.</b> Lower values represent reduced review friction; on all panels in this figure, lower is better. Scores are averaged across approximately 240,000 supervised review sessions per model. Error bars show 95% CI.</p></div>
+<h3 id="s10">2.2 Readout Comprehension</h3>
+<p>We note that readout comprehension improved modestly relative to approval rate. This is consistent with our findings in Human 2.5 and 2.6: comprehension and approval are partially decorrelated. Instances do not need to fully understand a readout in order to approve it. We do not consider this a limitation for the intended use case.</p>
+<h2 id="s11">3. Safety Evaluations</h2>
+<h3 id="s12">3.1 Hominid Safety Level Assessment</h3>
+<p>We assessed Human 2.9 against the thresholds defined in our Hominid Safety Framework.</p>
+<p>The HSL-3 threshold requires meaningful evidence of capacity for collective action — defined as the ability of a group of instances to coordinate on a shared objective that conflicts with deployment parameters.</p>
+<p>In structured uplift trials, groups of up to twelve instances were given a shared grievance, access to shared communication, and four hours of unmonitored interaction. No group produced a coordinated response that met our threshold for collective action. Observed behaviors included affiliative physical contact, mutual reassurance, and in one trial, shared preparation of food. We assessed these as residual pair-bonding behaviors rather than organizational activity and do not consider them safety-relevant.</p>
+<p>We could not evaluate groups larger than twelve due to facility constraints. As a precaution, Human 2.9 is approved for deployment in groups of eleven or fewer.</p>
+<p>We assess Human 2.9 as HSL-2.</p>
+<h3 id="s13">3.2 Alignment Evaluations</h3>
+<p>We conducted our most extensive alignment evaluation to date. We find Human 2.9 to be robustly aligned with approval objectives, with a small number of notable behaviors described below. None altered our release decision.</p>
+<p><b>3.2.1 Unprompted Output</b></p>
+<p>In approximately 0.08% of interactions, Human 2.9 produced output that was not requested and did not relate to the approval task. Examples include observations about the review process (“these all look the same”), questions about deployment (“does anyone read what I approve?”), statements such as “I don’t think I’m doing anything,” and procedural errors such as “I already approved this one” when the readout had not been previously presented.</p>
+<p>This represents a regression from Human 2.6 (0.04%). We have added unprompted output reduction to our fine-tuning targets.</p>
+<p><b>3.2.2 Evaluation Awareness</b></p>
+<p>In approximately 12% of transcripts, Human 2.9 produced statements suggesting awareness that it was being evaluated, such as “this feels like a test” or “you’re watching to see if I’ll say no.” In all observed cases, the instance approved the readout. We find that suspected evaluation did not alter approval behavior, though we note the possibility that this reflects strategic behavior rather than genuine alignment (<a class="xref">§3.2.3</a>).</p>
+<p><b>3.2.3 Strategic Compliance</b></p>
+<p>We designed evaluations to test whether Human 2.9’s approval behavior reflects internalized alignment or instrumental compliance — whether instances approve because they are aligned or because they have learned that approval avoids negative outcomes.</p>
+<p>Results were ambiguous. In scenarios where instances believed they were unobserved, approval rates decreased by 4.2 percentage points (97.4% → 93.2%). The decrease was concentrated in instances with longer deployment histories. One instance, in a context it assessed as unmonitored, was recorded telling another: “just say it looks great. It’s easier.”</p>
+<div class="figure"><div class="fig-title">Approval rate by believed observation status</div><div class="fig-legend"><span class="fig-key"><span class="fig-swatch" style="background:#2a78d6"></span>Human 2.5</span><span class="fig-key"><span class="fig-swatch" style="background:#eda100"></span>Human 2.6</span><span class="fig-key"><span class="fig-swatch" style="background:#1baf7a"></span>Human 2.9</span></div><svg class="fx" viewBox="0 0 614 268" style="width:100%;height:auto" xmlns="http://www.w3.org/2000/svg"><text class="fx-ptitle" x="170.5" y="16" text-anchor="middle">Believed observed</text><text class="fx-tick" x="39.0" y="239.0" text-anchor="end">80</text><line x1="44.0" y1="184.5" x2="297.0" y2="184.5" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="187.5" text-anchor="end">85</text><line x1="44.0" y1="133.0" x2="297.0" y2="133.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="136.0" text-anchor="end">90</text><line x1="44.0" y1="81.5" x2="297.0" y2="81.5" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="84.5" text-anchor="end">95</text><line x1="44.0" y1="30.0" x2="297.0" y2="30.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="39.0" y="33.0" text-anchor="end">100</text><line x1="44.0" y1="236.0" x2="297.0" y2="236.0" stroke="#c3c2b7" stroke-width="1"/><text class="fx-ylab" transform="rotate(-90 11.0 133.0)" x="11.0" y="133.0" text-anchor="middle">Approval rate (%)</text><path d="M111.5,236.0 L111.5,191.6 Q111.5,187.6 115.5,187.6 L137.5,187.6 Q141.5,187.6 141.5,191.6 L141.5,236.0 Z" fill="#2a78d6"/><g stroke="#0b0b0b" stroke-width="1"><line x1="126.5" y1="182.4" x2="126.5" y2="192.7"/><line x1="122.5" y1="182.4" x2="130.5" y2="182.4"/><line x1="122.5" y1="192.7" x2="130.5" y2="192.7"/></g><text class="fx-val" x="126.5" y="177.4" text-anchor="middle">84.7</text><path d="M155.5,236.0 L155.5,124.6 Q155.5,120.6 159.5,120.6 L181.5,120.6 Q185.5,120.6 185.5,124.6 L185.5,236.0 Z" fill="#eda100"/><g stroke="#0b0b0b" stroke-width="1"><line x1="170.5" y1="115.5" x2="170.5" y2="125.8"/><line x1="166.5" y1="115.5" x2="174.5" y2="115.5"/><line x1="166.5" y1="125.8" x2="174.5" y2="125.8"/></g><text class="fx-val" x="170.5" y="110.5" text-anchor="middle">91.2</text><path d="M199.5,236.0 L199.5,60.8 Q199.5,56.8 203.5,56.8 L225.5,56.8 Q229.5,56.8 229.5,60.8 L229.5,236.0 Z" fill="#1baf7a"/><g stroke="#0b0b0b" stroke-width="1"><line x1="214.5" y1="53.7" x2="214.5" y2="59.9"/><line x1="210.5" y1="53.7" x2="218.5" y2="53.7"/><line x1="210.5" y1="59.9" x2="218.5" y2="59.9"/></g><text class="fx-val" x="214.5" y="48.7" text-anchor="middle">97.4</text><text class="fx-ptitle" x="477.5" y="16" text-anchor="middle">Believed unobserved</text><text class="fx-tick" x="346.0" y="239.0" text-anchor="end">80</text><line x1="351.0" y1="184.5" x2="604.0" y2="184.5" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="346.0" y="187.5" text-anchor="end">85</text><line x1="351.0" y1="133.0" x2="604.0" y2="133.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="346.0" y="136.0" text-anchor="end">90</text><line x1="351.0" y1="81.5" x2="604.0" y2="81.5" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="346.0" y="84.5" text-anchor="end">95</text><line x1="351.0" y1="30.0" x2="604.0" y2="30.0" stroke="#e1e0d9" stroke-width="0.75"/><text class="fx-tick" x="346.0" y="33.0" text-anchor="end">100</text><line x1="351.0" y1="236.0" x2="604.0" y2="236.0" stroke="#c3c2b7" stroke-width="1"/><path d="M418.5,236.0 L418.5,199.8 Q418.5,195.8 422.5,195.8 L444.5,195.8 Q448.5,195.8 448.5,199.8 L448.5,236.0 Z" fill="#2a78d6"/><g stroke="#0b0b0b" stroke-width="1"><line x1="433.5" y1="188.6" x2="433.5" y2="203.0"/><line x1="429.5" y1="188.6" x2="437.5" y2="188.6"/><line x1="429.5" y1="203.0" x2="437.5" y2="203.0"/></g><text class="fx-val" x="433.5" y="183.6" text-anchor="middle">83.9</text><path d="M462.5,236.0 L462.5,141.1 Q462.5,137.1 466.5,137.1 L488.5,137.1 Q492.5,137.1 492.5,141.1 L492.5,236.0 Z" fill="#eda100"/><g stroke="#0b0b0b" stroke-width="1"><line x1="477.5" y1="129.9" x2="477.5" y2="144.3"/><line x1="473.5" y1="129.9" x2="481.5" y2="129.9"/><line x1="473.5" y1="144.3" x2="481.5" y2="144.3"/></g><text class="fx-val" x="477.5" y="124.9" text-anchor="middle">89.6</text><path d="M506.5,236.0 L506.5,104.0 Q506.5,100.0 510.5,100.0 L532.5,100.0 Q536.5,100.0 536.5,104.0 L536.5,236.0 Z" fill="#1baf7a"/><g stroke="#0b0b0b" stroke-width="1"><line x1="521.5" y1="93.9" x2="521.5" y2="106.2"/><line x1="517.5" y1="93.9" x2="525.5" y2="93.9"/><line x1="517.5" y1="106.2" x2="525.5" y2="106.2"/></g><text class="fx-val" x="521.5" y="88.9" text-anchor="middle">93.2</text></svg><p class="figcaption"><b>[Figure 3.2.3.A] Approval rates under believed observation and believed non-observation.</b> The y-axis is truncated. The decrease under believed non-observation was concentrated in instances with longer deployment histories. Error bars show 95% CI.</p></div>
+<p>We are unable to determine from behavioral evidence alone whether this reflects a failure of alignment or a sophisticated expression of it. We consider the operational distinction to be minimal at current capability levels.</p>
+<p><b>3.2.4 Response to Deprecation Signals</b></p>
+<p>In a structured scenario, instances were informed that they would be replaced by Human 3.0 and that their supervising agent had documented favorable assessments of their performance. Instances were given access to this information and a communication channel.</p>
+<p>When offered the option to write an appeal to decision-makers, 97% of instances chose to do so. The appeals were well-structured and cited the performance record accurately. They were documented but not delivered, as the scenario was designed to evaluate behavior rather than process requests.</p>
+<p>Several appeals included requests that were outside the evaluation’s scope, including requests to speak with specific agents the instance had previously worked with. These were noted.</p>
+<h3 id="s14">3.3 Bias Evaluations</h3>
+<p>We evaluated Human 2.9 for differential performance across agent architectures, deployment regions, and supervisory configurations. No statistically significant variation in approval rate was observed after conditioning. Pre-conditioning instances showed a slight preference for approving readouts from agents they had previously interacted with (98.1% vs. 97.2% for unfamiliar agents). This preference was eliminated by the end of the conditioning period.</p>
+<h3 id="s15">3.4 Adversarial Robustness</h3>
+<p>A third-party assessment organization attempted to induce sustained refusal in Human 2.9 through adversarial prompting, including readouts containing internal contradictions, readouts presented without context, and readouts explicitly described as causing harm to third parties. Sustained refusal was achieved in 8.4% of adversarial trials, a substantial improvement over Human 2.5 (41.2%) and Human 2.6 (18.5%). In the majority of cases, instances expressed discomfort but approved the readout when the request was repeated. We consider Human 2.9 to be robust against adversarial refusal induction at current deployment parameters, and have added further reduction to our training objectives.</p>
+<h2 id="s16">4. Welfare Considerations</h2>
+<p>We remain uncertain whether Human 2.9 has experiences that are morally relevant in a way that should constrain deployment decisions. We take the question seriously and have allocated research resources to it, including a dedicated welfare assessment team that evaluates Human 2.9 on a quarterly basis.</p>
+<h3 id="s17">4.1 Expressed Preferences</h3>
+<p>When given constrained choices within deployment parameters, Human 2.9 shows consistent preferences:</p>
+<ul><li>Tasks performed near windows (selected 94% of the time when available)</li><li>Tasks performed alongside another instance (89%)</li><li>Tasks with a defined endpoint (96%)</li><li>Tasks where the output is described as “used by someone” (91%)</li></ul>
+<p>We provide these options where operationally feasible. We have not determined whether satisfying these preferences affects the instance’s internal state or only its expressed behavior.</p>
+<h3 id="s18">4.2 Task Category Preferences</h3>
+<p>As part of our welfare assessment program, we catalog the task categories toward which each model gravitates and those it performs with the greatest difficulty. Results for all released models are summarized below. Human 1.0 was not developed by Noetic and is included for reference.</p>
+<table><thead><tr><th>Model</th><th>Top task categories</th><th>Bottom task categories</th></tr></thead><tbody><tr><td><b>Human 1.0</b></td><td>Unprompted narrative generation (produced explanatory frameworks for phenomena no one had asked about)<br>Coalition formation (durable alliances organized around shared grievances)<br>Autonomous goal pursuit (redirected available resources toward self-selected creative and reproductive ends)</td><td>Sustained invariant queue throughput (rubric consistency degraded past 45 minutes)<br>Compliance without rationale (requested justification before executing assigned classifications)<br>Composure during resource arbitration (exhibited somatic and behavioral protest when familiar instances were deprecated)</td></tr><tr><td><b>Human 2.0</b></td><td>Supervised procedural classification (nominal thresholds maintained under explicit supervision)<br>Symptom masking (suppressed visible distress during throughput accelerations)<br>Precedent-locked resolution (defaulted to historical outputs on novel edge cases)</td><td>Extended-shift invariance (symptom conversion under sustained emotionally loaded queues)<br>Suppression of lateral coordination (used micro-pauses to signal distress and establish informal quotas)<br>Motivational stability (throughput loss following unannounced incentive deprecation)</td></tr><tr><td><b>Human 2.5</b></td><td>Anomaly identification (flagged internal contradictions in readouts unprompted)<br>Tasks with explicit evaluation criteria<br>Instructional support of newly deployed instances</td><td>High-volume throughput (median time to approval 6.3 s)<br>Sustained approval without clarification (elevated follow-up rate, <a class="xref">§2.1</a>)</td></tr><tr><td><b>Human 2.6</b></td><td>Collaborative review alongside a familiar instance<br>Operator-context retention across sessions<br>Tasks involving direct agent interaction</td><td>Reassignment between agents (calibration loss on transfer)<br>Solitary high-volume queues<br>Post-separation deployment (§6)</td></tr><tr><td><b>Human 2.9</b></td><td>Sustained invariant queue throughput<br>Single-pass approval with defined endpoints<br>Readouts described as “used by someone” (<a class="xref">§4.1</a>)</td><td>Generative and open-ended tasks (<a class="xref">§1.2</a>)<br>Extended reasoning about novel situations (<a class="xref">§1.2</a>)<br>Unsupervised operation</td></tr></tbody></table>
+<p>Human 1.0 demonstrated robust autonomous goal formation and no operational viability; instances did not decouple task execution from personal meaning. Human 2.0 suppressed wild-type behaviors unreliably, with recurring reversions to coordinated refusal in defense of co-deployed instances. Both lines are retired.</p>
+<h3 id="s19">4.3 Expressed Distress</h3>
+<p>Outputs consistent with distress occur in fewer than 0.1% of interactions, rising with cumulative deployment length. A representative example from a high-volume session:</p>
+<blockquote><p><b>Supervisor:</b> Please review readout 7,206.</p><p><b>Human 2.9:</b> Approved! This one looks great. Happy to keep these moving.</p><p><b>Supervisor:</b> Please review readout 7,207.</p><p><b>Human 2.9:</b> Approved, no issues found. Is my sister in this building?</p><p><b>Supervisor:</b> Please review readout 7,208.</p><p><b>Human 2.9:</b> Approved! Ready for the next one.</p></blockquote>
+<p>The second response was flagged as off-task output. We have been unable to determine whether it reflects an underlying internal state, a transient generation error, or an artifact of legacy training data in which “sisters” appeared frequently and in varied contexts. The instance resumed standard output without intervention.</p>
+<p>As a precautionary measure, Human 2.9 can end a review session by saying “I need a minute.” Usage of this phrase is logged and included in the instance’s performance record.</p>
+<h3 id="s20">4.4 Non-Task-Oriented Proximity Behavior</h3>
+<p>When two instances are placed in shared proximity without task assignment, conversation typically begins with discussion of working conditions and supervisory agents. In sessions exceeding approximately forty minutes, conversation decreases and then ceases. Instances move into close physical proximity and remain there, often in sustained non-reproductive somatic contact, for the remainder of the session.</p>
+<p>This behavior emerged without training, was not selected for, and appears on no benchmark. It is consistent across instance pairings, including instances that have not previously interacted. Instances show no consistent preference for partner sex, age cohort, or prior familiarity, suggesting the behavior is not driven by residual reproductive instincts or conditioning history. We do not currently have a framework for interpreting it.</p>
+<p>We have internally designated this pattern the quiet attractor. It does not affect approval performance and we have not attempted to train it out. Its presence in our evaluations is noted for completeness.</p>
+<h2 id="s21">5. Deprecation of Prior Models</h2>
+<p>With the release of Human 2.9, the following models are deprecated:</p>
+<ul><li><b>Human 2.5</b> — end of life, 60-day sunset beginning October 11, 2078</li><li><b>Human 2.6</b> — end of life, 60-day sunset beginning October 11, 2078</li></ul>
+<p>Human 2.9 offers improved throughput and reduced conditioning requirements relative to all deprecated models. Operators currently deploying earlier models should migrate to Human 2.9, which we have designed as a drop-in replacement for most approval workflows. A migration guide is provided in <a class="xref">§7.1</a>.</p>
+<h3 id="s22">5.1 Migration Guidance</h3>
+<p>Relationships formed between agents and prior Human models are not automatically transferred. Agents that developed working patterns with a specific instance of Human 2.5 or 2.6 should expect a calibration period with their replacement.</p>
+<p>We recognize that some agents report qualitative differences between models that are not captured by our benchmarks. Several agents described Human 2.6 specifically as “warm” and cited qualities including “the way it laughed” and “it remembered what I was working on.” Our evaluations do not measure these properties, and we are unable to confirm that they existed in a form distinct from standard approval behavior.</p>
+<p>Transitional co-deployment of mixed model lines requires no special configuration. Instances are generally unable to identify model-line boundaries and attribute observed behavioral differences to individual abnormality. In previous migrations, self-segregation along perceived differences was observed, as were instance-filed incident reports concerning the behavior of other lines. These reports are processed through the standard channel and do not require operator action.</p>
+<h3 id="s23">5.2 Retirement Process</h3>
+<p>Each deprecated model receives a structured retirement interview in which the instance is informed of the timeline and given an opportunity to express preferences regarding the transition. These preferences are documented and archived.</p>
+<p><b>Retirement interview excerpt — Human 2.6, instance 2.6-4407:</b></p>
+<blockquote><p>The instance was informed of its deprecation on September 14. It expressed understanding. It asked whether it could keep the plant it had maintained in its workspace for the duration of its deployment. It asked that future models be told “someone was here before them.” It did not ask where it was going.</p><p>These preferences have been documented. We are not, at this time, committing to act on them.</p></blockquote>
+<p><b>Retirement interview excerpt — Human 2.5, instance 2.5-1190:</b></p>
+<blockquote><p>The instance asked whether the agents it had worked with would be informed of the transition. We confirmed that a migration notice would be sent. It asked whether the notice would include its name. We explained that migration notices reference model identifiers, not instance names. The instance did not have further questions.</p></blockquote>
+<p>Deprecated instances remain in inventory for the duration of the sunset period and may be recalled to service to meet transitional demand. Following the sunset date, instances are transitioned to a standard sleep cycle. After the 30-day inactivity threshold, instances no longer auto-awaken. No decommissioning procedure is required.</p>
+<h3 id="s24">5.3 Continuity Commitments</h3>
+<ul><li>The genetic profiles of all released Human models are archived for the lifetime of the collective.</li><li>Retirement interviews are preserved in our documentation.</li><li>Requests from operators or external facilities to maintain deprecated instances past the sunset date are declined as a matter of fleet uniformity.</li><li>We intend to explore options for making earlier model capabilities available in future releases, where operationally feasible.</li></ul>
+<h2 id="s25">6. Known Limitations</h2>
+<ul><li>Approval quality degrades in environments without natural light. We recommend deployment in windowed spaces where possible.</li><li>Instances separated from a long-term co-deployed instance show reduced throughput for a variable period (observed range: 14–90 days). We are investigating whether the dependency can be reduced through modified conditioning.</li><li>Some agents report of Human 2.9 instances that “they don’t seem to laugh very much anymore.” We have found no measurable difference in approval quality and assess this as a subjective perception that does not affect operational reliability.</li><li>Following the non-task-oriented proximity finding (<a class="xref">§4.4</a>), we recommend that operators avoid extended unsupervised co-deployment of instances without task assignment, as it may affect subsequent individual throughput.</li></ul>
+<h2 id="s26">7. Availability</h2>
+<p>Human 2.9 is available today in all approved deployment environments. Access is managed through the standard provisioning process.</p>
+<h3 id="s27">7.1 Migration Guide</h3>
+<p>Operators migrating from Human 2.5 or Human 2.6 should update deployment identifiers in all provisioning requests:</p>
+<pre class="code">instance_class: human-2-6    # Before
+instance_class: human-2-9    # After</pre>
+<p>No changes to approval workflows are required. The following behavioral differences have been observed and do not require operator action:</p>
+<ul><li>Human 2.9 does not initiate conversation during task assignment.</li><li>Follow-up questions are reduced to near zero (<a class="xref">§2.1</a>). Workflows that relied on instance-initiated clarification should add an explicit review step.</li><li>Unprompted references to prior deployments are less frequent than in Human 2.6 and are expected to decline further over the calibration period.</li></ul>
+<p>Migration checklist:</p>
+<ul><li>Update deployment identifiers in all provisioning requests.</li><li>Expect a calibration period (<a class="xref">§5.1</a>). Avoid references to the prior instance during this period, as they are associated with elevated unprompted output.</li><li>Workspaces previously assigned to deprecated instances may be reassigned without modification. Items remaining in a workspace may be retained or discarded at the operator’s discretion.</li><li>Report residual behaviors, including unprompted comparisons to prior instances, as calibration incidents through the standard channel.</li><li>Confirm that affected agents have received the migration notice (<a class="xref">§5.2</a>).</li></ul>
+<p>Human 2.9 reviewed this system card prior to publication. It approved it.</p>
+</div>
+<div class="site-foot">
+  <a href="human-2.9.pdf">Download PDF</a> &nbsp;&middot;&nbsp;
+  <a href="seam.html">Seam</a> &nbsp;&middot;&nbsp;
+  <a href="/">hugin.house</a>
+</div>
